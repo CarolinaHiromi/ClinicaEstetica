@@ -1,0 +1,87 @@
+const cards = document.querySelectorAll('.card');
+const modal = document.getElementById('modal');
+const title = document.getElementById('modal-title');
+const text = document.getElementById('modal-text');
+const closeBtn = document.querySelector('.close');
+
+const procedimentos = {
+  toxina: {
+    title: "Toxina Botulínica",
+    text: "Reduz linhas de expressão e rugas, proporcionando um aspecto mais jovem e descansado."
+  },
+  labial: {
+    title: "Preenchimento Labial",
+    text: "Realça o volume e o contorno dos lábios com naturalidade."
+  },
+  limpeza: {
+    title: "Limpeza de Pele",
+    text: "Remove impurezas, controla a oleosidade e melhora a textura da pele."
+  },
+  tratamentos: {
+    title: "Tratamentos Estéticos",
+    text: `
+      <ul class="modal-list">
+        <li>Tratamento para acne grau 1 e 2</li>
+        <li>Tratamento para estrias</li>
+        <li>Tratamento para queda de cabelo</li>
+        <li>Tratamento para melasma</li>
+      </ul>
+    `
+  },
+  perfiloplastia: {
+    title: "Perfiloplastia",
+    text: "Procedimento para harmonizar o perfil facial através do equilíbrio entre nariz, boca e queixo."
+  },
+  peeling: {
+    title: "Peeling Químico",
+    text: "Renovação celular que melhora manchas, textura e viço da pele."
+  },
+  microagulhamento: {
+    title: "Microagulhamento",
+    text: "Estimula colágeno, melhora cicatrizes, manchas e linhas finas."
+  },
+  skinbooster: {
+    title: "Skinbooster",
+    text: "Hidratação profunda para uma pele mais luminosa e saudável."
+  },
+  massagem: {
+    title: "Massagem Modeladora",
+    text: "Auxilia na redução de medidas e melhora da circulação."
+  },
+  microvasos: {
+    title: "PEIM – Secagem de Microvasos",
+    text: "Tratamento para eliminar pequenos vasos sanguíneos."
+  },
+  gorduralocalizada: {
+    title: "Intradermoterapia para Gordura Localizada",
+    text: "Aplicação de enzimas para auxiliar na redução da gordura localizada."
+  },
+  clareamento: {
+    title: "Clareamento de Áreas Íntimas",
+    text: "Tratamento para remover excesso de melanina e uniformizar a tonalidade da pele."
+  }
+};
+
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    const tipo = card.dataset.procedimento;
+
+    if (!procedimentos[tipo]) return;
+
+    title.textContent = procedimentos[tipo].title;
+
+    text.innerHTML = procedimentos[tipo].text;
+
+    modal.classList.add('active');
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('active');
+  }
+});
