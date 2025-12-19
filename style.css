@@ -205,42 +205,103 @@ body {
 /* ================= FOOTER ================= */
 .footer {
   background: var(--branco);
-  padding: 5rem 2rem;
+  padding: 5rem 2rem 6rem;
   text-align: center;
 }
 
+/* ÍCONES SOCIAIS */
 .icons {
   display: flex;
   justify-content: center;
   gap: 2.6rem;
-  margin-bottom: 2.8rem;
+  margin-bottom: 3rem;
+}
+
+.icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .icons svg {
   width: 34px;
   height: 34px;
   fill: var(--rosa-escuro);
+  transition: transform .3s ease, opacity .3s ease;
 }
 
-.footer address a {
-  display: inline-flex;
+.icons a:hover svg {
+  transform: scale(1.08);
+  opacity: .85;
+}
+
+/* INFORMAÇÕES */
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
   align-items: center;
-  gap: .8rem;
+}
+
+/* CRBM */
+.crbm {
+  font-size: 1.4rem;
+  letter-spacing: .12em;
+  color: var(--cinza);
+  font-weight: 500;
+}
+
+/* EMAIL */
+.email a {
+  font-size: 1.4rem;
+  color: var(--rosa-escuro);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border .3s ease;
+}
+
+.email a:hover {
+  border-color: var(--rosa-escuro);
+}
+
+/* ENDEREÇO */
+.footer address {
+  font-style: normal;
+}
+
+.address-link {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.6rem 2.6rem;
+  border-radius: 3rem;
+  text-decoration: none;
   color: var(--rosa-escuro);
   font-size: 1.5rem;
-  font-style: normal;
-  text-decoration: none;
-  padding: 1.2rem 2.4rem;
-  border-radius: 3rem;
-  transition: background .3s ease;
+  line-height: 1.6;
+  transition: background .3s ease, box-shadow .3s ease;
 }
 
-.footer address a::before {
-  content: "📍";
-}
-
-.footer address a:hover {
+.address-link:hover {
   background: var(--rosa-claro);
+  box-shadow: 0 8px 24px rgba(0,0,0,.05);
+}
+
+/* ÍCONE PIN */
+.pin-icon svg {
+  width: 22px;
+  height: 22px;
+  fill: var(--rosa-escuro);
+  flex-shrink: 0;
+  margin-top: .2rem;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .address-link {
+    font-size: 1.4rem;
+    padding: 1.4rem 2rem;
+  }
 }
 
 /* ================= MOBILE ================= */
