@@ -44,9 +44,9 @@ const procedimentos = {
     title: "Skinbooster",
     text: "Hidratação profunda para uma pele mais luminosa e saudável."
   },
-  massagem: {
-    title: "Massagem Modeladora",
-    text: "Auxilia na redução de medidas e melhora da circulação."
+  melasma: {
+    title: "Tratamento de melasma",
+    text: "Auxilia na redução de manchas e controle da produção excessiva de pigmentos na pele."
   },
   microvasos: {
     title: "PEIM – Secagem de Microvasos",
@@ -56,9 +56,9 @@ const procedimentos = {
     title: "Intradermoterapia para Gordura Localizada",
     text: "Aplicação de enzimas para auxiliar na redução da gordura localizada."
   },
-  clareamento: {
-    title: "Clareamento de Áreas Íntimas",
-    text: "Tratamento para remover excesso de melanina e uniformizar a tonalidade da pele."
+  bioestimulador: {
+    title: "Bioestimulador de colágeno",
+    text: "Tratamento para ativar a produção de colágeno, melhorando a firmeza, elasticidade e sustentação da pele."
   }
 };
 
